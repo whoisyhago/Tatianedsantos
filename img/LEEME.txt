@@ -1,4 +1,7 @@
-Guarda aqui las 3 fotos:
-- tatiane-1.jpg (exposicion, vestido iridiscente, obras circulares)
-- tatiane-2.jpg (retrato Cacique, vestido amarillo)
-- tatiane-3.jpg (obra circular violeta, galeria blanca)
+Fotos usadas en la web:
+- portada.jpg            -> portada principal (hero)
+- descubrir-artista.jpg  -> bloque "Descubrir a la artista"
+- explorar-obras.jpg     -> bloque "Explorar las obras"
+- tatiane-1.jpg (exposicion, obras circulares)   -> tarjeta "Serie Lunas"
+- tatiane-2.jpg (retrato Cacique)                -> tarjeta "Cacique" y banda "Arte que florece"
+- tatiane-3.jpg (obra circular violeta)          -> tarjeta "Florescer"
