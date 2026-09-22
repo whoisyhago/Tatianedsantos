@@ -43,7 +43,7 @@ nav ul a:hover::after{right:0}
 
 /* ---------- HERO ---------- */
 .hero{position:relative;height:88vh;min-height:540px;overflow:hidden;background:linear-gradient(160deg,#cdb9c6 0%,#b1a6c4 40%,#96b4b6 75%,#d8c9b2 100%)}
-.hero img{position:absolute;inset:0;transform:scale(1.02);animation:heroZoom 12s ease forwards}
+.hero img{position:absolute;inset:0;object-position:center 22%;transform:scale(1.02);animation:heroZoom 12s ease forwards}
 @keyframes heroZoom{to{transform:scale(1.09)}}
 .hero .veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(17,17,17,.42),transparent 55%)}
 .hero-content{position:absolute;left:0;right:0;bottom:9vh;text-align:center;color:#fff;padding:0 6vw}
@@ -59,7 +59,7 @@ nav ul a:hover::after{right:0}
 /* ---------- EDITORIAL BOXES ---------- */
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:26px;padding:26px 26px 0}
 .duo-item{position:relative;aspect-ratio:4/5;overflow:hidden;background:linear-gradient(160deg,#e9dfd2,#d5cabb)}
-.duo-item img{transition:transform 1.4s ease}
+.duo-item img{transition:transform 1.4s ease;object-position:center top}
 .duo-item:hover img{transform:scale(1.06)}
 .duo-item .cap{position:absolute;left:0;right:0;bottom:0;padding:60px 30px 30px;text-align:center;color:#fff;
   background:linear-gradient(to top,rgba(17,17,17,.5),transparent)}
@@ -156,7 +156,7 @@ footer{background:#fff;padding:70px 6vw 40px;border-top:1px solid var(--line)}
 </div>
 
 <header class="hero">
-  <img src="img/tatiane-1.jpg" alt="Tatiane Dos Santos en exposición junto a su serie de obras circulares" onerror="this.remove()">
+  <img src="img/portada.jpg" alt="Tatiane Dos Santos en su atelier, entre arreglos florales" onerror="this.remove()">
   <div class="veil"></div>
   <div class="hero-content">
     <h1>Colección Florescer</h1>
@@ -166,11 +166,11 @@ footer{background:#fff;padding:70px 6vw 40px;border-top:1px solid var(--line)}
 
 <div class="duo">
   <div class="duo-item reveal">
-    <img src="img/tatiane-2.jpg" alt="Tatiane junto a su retrato de un cacique indígena" onerror="this.remove()">
+    <img src="img/descubrir-artista.jpg" alt="Tatiane Dos Santos con vestido pintado a mano junto a un ramo de flores" onerror="this.remove()">
     <div class="cap"><a class="btn-line" href="#historia">Descubrir a la artista</a></div>
   </div>
   <div class="duo-item reveal">
-    <img src="img/tatiane-3.jpg" alt="Obra circular en violetas y turquesas en galería" onerror="this.remove()">
+    <img src="img/explorar-obras.jpg" alt="Tatiane Dos Santos en galería junto a su retrato Cacique" onerror="this.remove()">
     <div class="cap"><a class="btn-line" href="#obras">Explorar las obras</a></div>
   </div>
 </div>
