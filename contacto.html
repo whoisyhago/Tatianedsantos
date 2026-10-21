@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto | Tatiane Dos Santos</title>
+<meta name="description" content="Contacta con Tatiane Dos Santos por WhatsApp, email o Instagram (@tatianedossantosart) para obras, encargos, exposiciones y colaboraciones.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#ffffff;
+  --off:#f7f5f2;
+  --ink:#111111;
+  --grey:#767268;
+  --line:#e4e0d9;
+  --gold:#a58a55;
+  --serif:'Playfair Display',serif;
+  --sans:'Jost',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.6;font-weight:300;overflow-x:hidden}
+::selection{background:var(--ink);color:#fff}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit}
+
+/* ---------- ANNOUNCEMENT BAR ---------- */
+.bar{background:var(--ink);color:#fff;text-align:center;padding:9px 16px;font-size:.68rem;letter-spacing:.26em;text-transform:uppercase}
+.bar span{opacity:.9}
+
+/* ---------- NAV ---------- */
+.nav-wrap{position:sticky;top:0;z-index:300;background:var(--white);border-bottom:1px solid var(--line)}
+nav{position:relative;display:flex;flex-direction:column;align-items:center;padding:26px 6vw 0}
+.brand-mark{position:absolute;right:6vw;top:50%;transform:translateY(-50%);height:118px;width:auto;display:block}
+.brand-mark img{height:100%;width:auto;display:block}
+.logo{font-family:var(--serif);font-weight:500;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:.34em;text-transform:uppercase;text-decoration:none;margin-bottom:20px;text-align:center}
+.logo small{display:block;font-family:var(--sans);font-weight:300;font-size:.62rem;letter-spacing:.52em;color:var(--grey);margin-top:4px}
+nav ul{display:flex;gap:44px;list-style:none;padding-bottom:18px}
+nav ul a{text-decoration:none;font-size:.72rem;text-transform:uppercase;letter-spacing:.24em;position:relative;padding-bottom:6px}
+nav ul a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--ink);transition:right .35s}
+nav ul a:hover::after{right:0}
+@media(max-width:1100px){.brand-mark{height:84px;right:4vw}}
+@media(max-width:760px){nav ul{gap:22px;flex-wrap:wrap;justify-content:center}nav{padding-top:22px}.brand-mark{position:static;transform:none;height:72px;margin-bottom:12px;order:-1}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;height:88vh;min-height:540px;overflow:hidden;background:linear-gradient(160deg,#cdb9c6 0%,#b1a6c4 40%,#96b4b6 75%,#d8c9b2 100%)}
+.hero img{position:absolute;inset:0;object-position:center 22%;transform:scale(1.02);animation:heroZoom 12s ease forwards}
+@keyframes heroZoom{to{transform:scale(1.09)}}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(17,17,17,.42),transparent 55%)}
+.hero-content{position:absolute;left:0;right:0;bottom:9vh;text-align:center;color:#fff;padding:0 6vw}
+.hero-content h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.4rem,5.4vw,4.6rem);letter-spacing:.06em;margin-bottom:26px;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.btn{display:inline-block;text-decoration:none;font-size:.72rem;text-transform:uppercase;letter-spacing:.3em;padding:16px 44px;transition:all .35s}
+.btn-white{background:#fff;color:var(--ink);border:1px solid #fff}
+.btn-white:hover{background:transparent;color:#fff}
+.btn-dark{background:var(--ink);color:#fff;border:1px solid var(--ink)}
+.btn-dark:hover{background:transparent;color:var(--ink)}
+.btn-line{border-bottom:1px solid var(--ink);padding:4px 2px;letter-spacing:.26em;font-size:.72rem;text-transform:uppercase;text-decoration:none}
+.btn-line:hover{color:var(--gold);border-color:var(--gold)}
+
+/* ---------- EDITORIAL BOXES ---------- */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:26px;padding:26px 26px 0}
+.duo-item{position:relative;aspect-ratio:4/5;overflow:hidden;background:linear-gradient(160deg,#e9dfd2,#d5cabb)}
+.duo-item img{transition:transform 1.4s ease;object-position:center top}
+.duo-item:hover img{transform:scale(1.06)}
+.duo-item .cap{position:absolute;left:0;right:0;bottom:0;padding:60px 30px 30px;text-align:center;color:#fff;
+  background:linear-gradient(to top,rgba(17,17,17,.5),transparent)}
+.duo-item .cap a{color:#fff;border-color:#fff}
+.duo-item .cap a:hover{color:var(--gold)}
+@media(max-width:760px){.duo{grid-template-columns:1fr}}
+
+/* ---------- SECTION HEADS ---------- */
+section{padding:100px 6vw}
+.sec-head{text-align:center;margin-bottom:64px}
+.sec-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,3.4vw,2.7rem);letter-spacing:.08em;margin-bottom:14px}
+.sec-head p{color:var(--grey);font-size:.95rem;max-width:56ch;margin:0 auto}
+
+/* ---------- COLLECTION GRID (product-card style) ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px 26px;max-width:1300px;margin:0 auto}
+.card{text-align:center;text-decoration:none;display:block}
+.card .ph{aspect-ratio:4/5;overflow:hidden;margin-bottom:20px;position:relative;background:var(--off)}
+.card .ph img{transition:transform 1.2s ease}
+.card:hover .ph img{transform:scale(1.07)}
+.card .ph .tag{position:absolute;top:14px;left:14px;background:#fff;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;padding:6px 12px}
+.card h3{font-family:var(--serif);font-weight:500;font-size:1.15rem;letter-spacing:.06em;margin-bottom:4px}
+.card .med{font-size:.72rem;text-transform:uppercase;letter-spacing:.2em;color:var(--grey);margin-bottom:8px}
+.card .price{font-size:.85rem;letter-spacing:.08em}
+.grid-cta{text-align:center;margin-top:60px}
+/* gradient stand-ins for artworks without photos */
+.ph-a{background:radial-gradient(circle at 35% 30%,#e8c39a,#b46a4e 60%,#5d3b33)}
+.ph-b{background:radial-gradient(circle at 65% 35%,#bfe0d8,#5f9e96 55%,#274b49)}
+.ph-c{background:radial-gradient(circle at 40% 60%,#d9b8d4,#9285b5 55%,#3c3357)}
+
+/* ---------- QUOTE STRIP ---------- */
+.quote{background:var(--off);text-align:center;padding:90px 6vw}
+.quote p{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,2.8vw,2.1rem);max-width:34ch;margin:0 auto 22px;line-height:1.4}
+.quote span{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--grey)}
+
+/* ---------- SERVICES ---------- */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);max-width:1300px;margin:0 auto}
+.svc{background:#fff;padding:52px 34px;text-align:center;transition:background .4s}
+.svc:hover{background:var(--off)}
+.svc .n{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--gold);display:block;margin-bottom:18px}
+.svc h3{font-family:var(--serif);font-weight:500;font-size:1.25rem;letter-spacing:.06em;margin-bottom:12px}
+.svc p{font-size:.88rem;color:var(--grey);margin-bottom:22px}
+
+/* ---------- FULL-BLEED CTA ---------- */
+.bleed{position:relative;height:70vh;min-height:440px;overflow:hidden;background:linear-gradient(160deg,#b8a8c9,#7d94b0 55%,#c9b8a0)}
+.bleed img{position:absolute;inset:0}
+.bleed .veil{position:absolute;inset:0;background:rgba(17,17,17,.34)}
+.bleed .inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;padding:0 6vw}
+.bleed h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,4vw,3.2rem);letter-spacing:.08em;margin-bottom:26px}
+
+/* ---------- NEWSLETTER ---------- */
+.news{background:var(--ink);color:#fff;text-align:center;padding:90px 6vw}
+.news h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.5rem,2.8vw,2.2rem);letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px}
+.news p{color:rgba(255,255,255,.65);font-size:.92rem;max-width:52ch;margin:0 auto 36px}
+.news form{display:flex;max-width:460px;margin:0 auto;border:1px solid rgba(255,255,255,.4)}
+.news input{flex:1;background:transparent;border:none;outline:none;color:#fff;padding:16px 20px;font-family:var(--sans);font-size:.85rem;letter-spacing:.06em}
+.news input::placeholder{color:rgba(255,255,255,.5)}
+.news button{background:#fff;color:var(--ink);border:none;padding:16px 30px;font-family:var(--sans);font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;cursor:pointer;transition:background .3s}
+.news button:hover{background:var(--gold);color:#fff}
+.news small{display:block;margin-top:18px;font-size:.68rem;color:rgba(255,255,255,.4);letter-spacing:.04em}
+
+/* ---------- FOOTER ---------- */
+footer{background:#fff;padding:70px 6vw 40px;border-top:1px solid var(--line)}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;max-width:1300px;margin:0 auto 60px}
+.foot-grid h4{font-size:.72rem;text-transform:uppercase;letter-spacing:.28em;margin-bottom:20px}
+.foot-grid ul{list-style:none}
+.foot-grid li{margin-bottom:10px}
+.foot-grid a{text-decoration:none;font-size:.85rem;color:var(--grey);transition:color .3s}
+.foot-grid a:hover{color:var(--ink)}
+.foot-bottom{max-width:1300px;margin:0 auto;padding-top:26px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.72rem;letter-spacing:.14em;color:var(--grey);text-transform:uppercase}
+.socials{display:flex;gap:26px}
+.socials a{text-decoration:none;color:var(--grey)}
+.socials a:hover{color:var(--ink)}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s ease}
+.reveal.on{opacity:1;transform:none}
+
+/* ---------- CONTACTO ---------- */
+nav ul a.active::after{right:0}
+.eyebrow{display:block;font-size:.68rem;letter-spacing:.36em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.c-head{text-align:center;padding:110px 6vw 70px;background:var(--off)}
+.c-head h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,6vw,4.6rem);letter-spacing:.06em;margin-bottom:22px}
+.c-head p{color:var(--grey);max-width:56ch;margin:0 auto;font-size:1rem}
+.ig-wrap{padding-bottom:0}
+.ig{display:grid;grid-template-columns:1fr 1.15fr;max-width:1100px;margin:0 auto;border:1px solid var(--line);text-decoration:none;color:var(--ink);transition:border-color .4s}
+.ig:hover{border-color:var(--ink)}
+.ig-ph{aspect-ratio:1/1;overflow:hidden;background:radial-gradient(circle at 35% 30%,#e8c39a,#b46a4e 60%,#5d3b33)}
+.ig-ph img{transition:transform 1.2s ease}
+.ig:hover .ig-ph img{transform:scale(1.05)}
+.ig-body{padding:56px 6%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.ig-body h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.5rem,2.8vw,2.3rem);letter-spacing:.03em;margin-bottom:18px;word-break:break-word}
+.ig-body p{color:var(--grey);margin-bottom:32px;max-width:44ch}
+.ig:hover .btn-dark{background:transparent;color:var(--ink)}
+@media(max-width:760px){.ig{grid-template-columns:1fr}.ig-ph{aspect-ratio:4/3}.ig-body{padding:38px 26px;align-items:center;text-align:center}}
+.channels{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);max-width:1100px;margin:0 auto}
+.ch{background:#fff;padding:56px 40px;text-align:center;text-decoration:none;color:var(--ink);transition:background .4s;display:flex;flex-direction:column;align-items:center}
+.ch:hover{background:var(--off)}
+.ch svg{width:34px;height:34px;fill:var(--gold);color:var(--gold);margin-bottom:22px}
+.ch svg.stroke{fill:none}
+.ch h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.1rem,1.8vw,1.35rem);letter-spacing:.04em;margin-bottom:12px;word-break:break-word}
+.ch p{color:var(--grey);font-size:.9rem;margin-bottom:24px;max-width:38ch}
+.ch:hover .btn-line{color:var(--gold);border-color:var(--gold)}
+@media(max-width:760px){.channels{grid-template-columns:1fr}.ch{padding:44px 24px}}
+.motives-wrap{background:var(--off)}
+.motives{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:900px;margin:0 auto}
+.motives a{text-decoration:none;border:1px solid var(--ink);padding:14px 26px;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;transition:all .3s;background:#fff}
+.motives a:hover{background:var(--ink);color:#fff}
+.note{text-align:center;margin-top:46px;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--grey)}
+</style>
+</head>
+<body>
+
+<div class="bar"><span>Envíos internacionales · Certificado de autenticidad incluido · Encargos personalizados</span></div>
+
+<div class="nav-wrap">
+<nav>
+  <a class="logo" href="index.html">Tatiane Dos Santos<small>Atelier Florescer</small></a>
+  <ul>
+    <li><a href="la-artista.html">La artista</a></li>
+    <li><a href="index.html#obras">Obras y Eventos</a></li>
+    <li><a href="index.html#servicios">Servicios</a></li>
+    <li><a class="active" href="contacto.html" aria-current="page">Contacto</a></li>
+  </ul>
+  <a class="brand-mark" href="index.html" aria-label="Tatiane Dos Santos Art"><img src="img/logo.png" alt="Logotipo Tatiane Dos Santos Art"></a>
+</nav>
+</div>
+
+<header class="c-head">
+  <span class="eyebrow reveal">Contacto</span>
+  <h1 class="reveal">Hablemos</h1>
+  <p class="reveal">Para adquirir una obra, encargar una pieza a medida, proponer una exposición o colaborar con la artista, escríbele por el canal que prefieras.</p>
+</header>
+
+<section class="ig-wrap">
+  <a class="ig reveal" href="https://www.instagram.com/tatianedossantosart/" target="_blank" rel="noopener">
+    <div class="ig-ph"><img src="img/tatiane-3.jpg" alt="Obra circular de Tatiane Dos Santos" onerror="this.remove()"></div>
+    <div class="ig-body">
+      <span class="eyebrow">Instagram oficial</span>
+      <h2>@tatianedossantosart</h2>
+      <p>El diario del atelier: nuevas obras, procesos, exposiciones y piezas disponibles antes que en ningún otro sitio.</p>
+      <span class="btn btn-dark">Seguir en Instagram</span>
+    </div>
+  </a>
+</section>
+
+<section class="ch-wrap">
+  <div class="channels">
+    <a class="ch reveal" data-wa href="https://wa.me/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-8.5 14.7L2.2 21.8l5-1.3A9.8 9.8 0 1 0 12 2.2Zm0 1.8a8 8 0 1 1-4.1 14.9l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 0 1 12 4Zm-3.3 4.1c-.2 0-.5 0-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 5 4.3 2.4 1 2.9.8 3.4.7.5 0 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4l-.5-.3-1.9-.9c-.3-.1-.5-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5.3-.5v-.5l-.9-2.1c-.2-.5-.4-.5-.6-.5h-.5Z"/></svg>
+      <span class="eyebrow">WhatsApp</span>
+      <h3>Escríbeme por WhatsApp</h3>
+      <p>La forma más rápida de consultar precios, disponibilidad o concertar una visita al atelier.</p>
+      <span class="btn-line">Abrir chat</span>
+    </a>
+    <a class="ch reveal" href="mailto:hola@tatianedossantos.art">
+      <svg class="stroke" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="5.5" width="18" height="13" rx="1"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>
+      <span class="eyebrow">Email</span>
+      <h3>hola@tatianedossantos.art</h3>
+      <p>Para propuestas de exposición, prensa, colaboraciones con marcas y encargos detallados.</p>
+      <span class="btn-line">Enviar email</span>
+    </a>
+  </div>
+</section>
+
+<section class="motives-wrap">
+  <div class="sec-head reveal">
+    <h2>¿En qué puedo ayudarte?</h2>
+    <p>Elige un motivo y se abrirá WhatsApp con el mensaje ya preparado.</p>
+  </div>
+  <div class="motives reveal">
+    <a data-wa="Hola Tatiane, me interesa adquirir una de tus obras. ¿Podrías enviarme información y precios?" href="https://wa.me/" target="_blank" rel="noopener">Adquirir una obra</a>
+    <a data-wa="Hola Tatiane, me gustaría encargarte una obra a medida. ¿Hablamos?" href="https://wa.me/" target="_blank" rel="noopener">Encargo a medida</a>
+    <a data-wa="Hola Tatiane, me gustaría proponerte una exposición o colaboración artística." href="https://wa.me/" target="_blank" rel="noopener">Exposiciones</a>
+    <a data-wa="Hola Tatiane, te escribo por una colaboración de modelaje / marca." href="https://wa.me/" target="_blank" rel="noopener">Modelaje &amp; marcas</a>
+  </div>
+  <p class="note reveal">Con base en Madrid · Envíos internacionales · Certificado de autenticidad incluido</p>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <h4>Atelier</h4>
+      <ul>
+        <li><a href="index.html#obras">Obras disponibles</a></li>
+        <li><a href="index.html#servicios">Encargos a medida</a></li>
+        <li><a href="index.html#servicios">Exposiciones</a></li>
+        <li><a href="contacto.html">Concertar una cita</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>La Artista</h4>
+      <ul>
+        <li><a href="la-artista.html">Historia</a></li>
+        <li><a href="https://www.instagram.com/tatiane_d.santos/" target="_blank" rel="noopener">Modelaje</a></li>
+        <li><a href="https://www.instagram.com/florescertds/" target="_blank" rel="noopener">Proceso creativo</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Sígueme</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/tatianedossantosart/" target="_blank" rel="noopener">Instagram · @tatianedossantosart</a></li>
+        <li><a href="https://www.instagram.com/tatiane_d.santos/" target="_blank" rel="noopener">Instagram · @tatiane_d.santos</a></li>
+        <li><a href="https://www.instagram.com/florescertds/" target="_blank" rel="noopener">Instagram · @florescertds</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="contacto.html">WhatsApp</a></li>
+        <li><a href="mailto:hola@tatianedossantos.art">Email</a></li>
+        <li><a href="https://www.instagram.com/tatianedossantosart/" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Tatiane Dos Santos</span>
+    <div class="socials">
+      <a href="https://www.instagram.com/tatianedossantosart/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.instagram.com/florescertds/" target="_blank" rel="noopener">Florescer</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Número de WhatsApp: prefijo de país + número, sin espacios ni "+" (ej. 34612345678) */
+const WHATSAPP='34600000000';
+document.querySelectorAll('[data-wa]').forEach(a=>{
+  const t=a.getAttribute('data-wa');
+  a.href='https://wa.me/'+WHATSAPP+(t?'?text='+encodeURIComponent(t):'');
+});
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
