@@ -172,6 +172,26 @@ nav ul a.active::after{right:0}
 .press .date{font-family:var(--serif);font-size:2.4rem;line-height:1;color:var(--gold);text-align:center}
 .press .date small{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--grey);margin-top:6px}
 @media(max-width:760px){.press{grid-template-columns:1fr;text-align:center;padding:36px 26px;gap:22px}}
+/* ---------- PESTAÑAS ---------- */
+.tabs-bar{background:var(--off);padding:44px 6vw;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+.tabs-bar button{background:transparent;border:1px solid var(--ink);padding:16px 42px;font-family:var(--sans);font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;cursor:pointer;transition:all .3s;color:var(--ink);min-width:180px}
+.tabs-bar button:hover,.tabs-bar button[aria-selected="true"]{background:var(--ink);color:#fff}
+.panel[hidden]{display:none}
+
+/* ---------- ENTREVISTAS ---------- */
+.iv-list{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:34px}
+.iv{display:grid;grid-template-columns:110px 1fr;gap:44px;border:1px solid var(--line);padding:50px 56px;text-decoration:none;color:var(--ink);transition:border-color .4s,background .4s}
+.iv:hover{border-color:var(--ink);background:var(--off)}
+.iv .num{font-family:var(--serif);font-style:italic;font-size:3rem;line-height:1;color:var(--gold)}
+.iv .meta{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-bottom:16px}
+.iv .meta .kind{font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;border:1px solid var(--gold);color:var(--gold);padding:5px 12px}
+.iv .meta span{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--grey)}
+.iv h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.3rem,2.4vw,1.85rem);line-height:1.3;letter-spacing:.02em;margin-bottom:18px}
+.iv p{color:var(--grey);max-width:66ch;margin-bottom:18px}
+.iv blockquote{font-family:var(--serif);font-style:italic;font-size:1.1rem;border-left:1px solid var(--gold);padding-left:20px;margin:0 0 26px;max-width:56ch}
+.iv blockquote small{display:block;font-family:var(--sans);font-style:normal;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--grey);margin-top:6px}
+.iv:hover .btn-line{color:var(--gold);border-color:var(--gold)}
+@media(max-width:760px){.iv{grid-template-columns:1fr;gap:14px;padding:34px 24px}.iv .num{font-size:2.2rem}.tabs-bar button{min-width:0;padding:14px 26px}}
 </style>
 </head>
 <body>
@@ -200,6 +220,12 @@ nav ul a.active::after{right:0}
   </div>
 </header>
 
+<div class="tabs-bar" role="tablist" aria-label="Secciones de la artista">
+  <button role="tab" id="tab-sobre" aria-controls="sobre-mi" aria-selected="true" data-tab="sobre-mi">Sobre mí</button>
+  <button role="tab" id="tab-entrevistas" aria-controls="entrevistas" aria-selected="false" data-tab="entrevistas">Entrevistas</button>
+</div>
+
+<div class="panel" id="sobre-mi" role="tabpanel" aria-labelledby="tab-sobre">
 <section>
   <div class="intro">
     <div class="ph reveal"><img src="img/tatiane-1.jpg" alt="Tatiane Dos Santos junto a su Serie Lunas" onerror="this.remove()"></div>
@@ -279,16 +305,48 @@ nav ul a.active::after{right:0}
   </div>
 </section>
 
-<section style="padding-top:0">
-  <a class="press reveal" href="https://www.eldiariodemadrid.es/articulo/entrevistas/tatiane-dos-santos-arte-nace-barro-naturaleza-conexion-profunda-mis-raices/20250614094852102703.html" target="_blank" rel="noopener" style="text-decoration:none">
-    <div class="date">14<small>Junio 2025</small></div>
-    <div>
-      <span class="src">En prensa · El Diario de Madrid</span>
-      <h3>«Mi arte nace del barro, la naturaleza y una conexión profunda con mis raíces»</h3>
-    </div>
-    <span class="btn-line">Leer entrevista</span>
-  </a>
+</div>
+
+<div class="panel" id="entrevistas" role="tabpanel" aria-labelledby="tab-entrevistas" hidden>
+<section>
+  <div class="sec-head reveal">
+    <span class="eyebrow">En prensa</span>
+    <h2>Entrevistas</h2>
+    <p>Lo que Tatiane ha contado sobre su arte, sus raíces y su trayectoria en medios e instituciones.</p>
+  </div>
+  <div class="iv-list">
+    <a class="iv reveal" href="https://www.eldiariodemadrid.es/articulo/entrevistas/tatiane-dos-santos-arte-nace-barro-naturaleza-conexion-profunda-mis-raices/20250614094852102703.html" target="_blank" rel="noopener">
+      <div class="num">I</div>
+      <div>
+        <div class="meta"><span class="kind">Entrevista</span><span>El Diario de Madrid</span><span>14 junio 2025</span></div>
+        <h3>«Mi arte nace del barro, la naturaleza y una conexión profunda con mis raíces»</h3>
+        <p>Tatiane repasa sus raíces brasileñas e indígenas, cómo la pandemia la devolvió a la pintura, el significado de su obra <em>Do barro ao ouro</em>, su unión a Fidelitas Arte y sus planes de exponer en Portugal, México e Italia.</p>
+        <blockquote>«Una búsqueda de equilibrio entre el barro y el oro, entre lo ancestral y lo contemporáneo.»</blockquote>
+        <span class="btn-line">Leer entrevista</span>
+      </div>
+    </a>
+    <a class="iv reveal" href="https://fundacionzaballos.es/tatiane-dos-santos-otimista/" target="_blank" rel="noopener">
+      <div class="num">II</div>
+      <div>
+        <div class="meta"><span class="kind">Obra solidaria</span><span>Fundación Zaballos</span><span>Fidelitas Arte</span></div>
+        <h3>«Otimista», donada a la Fundación Zaballos</h3>
+        <p>La Fundación Zaballos presenta <em>Otimista</em>, una obra de Tatiane Dos Santos en técnica mixta sobre lienzo, donada a la fundación a través de Fidelitas Arte.</p>
+        <span class="btn-line">Ver la obra</span>
+      </div>
+    </a>
+    <a class="iv reveal" href="https://lorena.ig.com.br/categoria/magazine/Tatiane-Dos-Santos-Artista-Indigena-fala-sobre-a-paixao-pela-arte-e-a-importancia-da-educacao-artistica-nos-dias-atuais" target="_blank" rel="noopener">
+      <div class="num">III</div>
+      <div>
+        <div class="meta"><span class="kind">Entrevista</span><span>Lorena Magazine · Brasil</span><span>17 enero 2023</span></div>
+        <h3>Artista indígena: su pasión por el arte y la importancia de la educación artística</h3>
+        <p>En esta entrevista exclusiva, Tatiane cuenta cómo empezó: de promotora de exposiciones en España a la restauración de muebles y las clases de pintura. Habla de la naturaleza como inspiración, de su obra más especial, <em>Viagem</em>, y del color como emoción.</p>
+        <blockquote>«Los colores desbordan emociones, alegría y confianza.»<small>Traducido del portugués</small></blockquote>
+        <span class="btn-line">Leer entrevista (en portugués)</span>
+      </div>
+    </a>
+  </div>
 </section>
+</div>
 
 <div class="bleed">
   <img src="img/explorar-obras.jpg" alt="Tatiane Dos Santos en galería junto a su obra" onerror="this.remove()">
@@ -342,6 +400,16 @@ nav ul a.active::after{right:0}
 <script>
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+const tabs=document.querySelectorAll('.tabs-bar [data-tab]');
+function show(id,push){
+  if(!document.getElementById(id))id='sobre-mi';
+  tabs.forEach(t=>t.setAttribute('aria-selected',t.dataset.tab===id));
+  document.querySelectorAll('.panel').forEach(p=>p.hidden=p.id!==id);
+  if(push)history.replaceState(null,'',id==='sobre-mi'?location.pathname:'#'+id);
+}
+tabs.forEach(t=>t.addEventListener('click',()=>show(t.dataset.tab,true)));
+show((location.hash||'#sobre-mi').slice(1),false);
+window.addEventListener('hashchange',()=>show(location.hash.slice(1),false));
 </script>
 </body>
 </html>
