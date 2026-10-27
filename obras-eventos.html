@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obras y Eventos | Tatiane Dos Santos</title>
+<meta name="description" content="Obras y eventos recientes de Tatiane Dos Santos: colecciones, piezas de autor y mercados de arte en Madrid, directamente desde su Instagram @tatianedossantosart.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#ffffff;
+  --off:#f7f5f2;
+  --ink:#111111;
+  --grey:#767268;
+  --line:#e4e0d9;
+  --gold:#a58a55;
+  --serif:'Playfair Display',serif;
+  --sans:'Jost',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.6;font-weight:300;overflow-x:hidden}
+::selection{background:var(--ink);color:#fff}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit}
+
+/* ---------- ANNOUNCEMENT BAR ---------- */
+.bar{background:var(--ink);color:#fff;text-align:center;padding:9px 16px;font-size:.68rem;letter-spacing:.26em;text-transform:uppercase}
+.bar span{opacity:.9}
+
+/* ---------- NAV ---------- */
+.nav-wrap{position:sticky;top:0;z-index:300;background:var(--white);border-bottom:1px solid var(--line)}
+nav{position:relative;display:flex;flex-direction:column;align-items:center;padding:26px 6vw 0}
+.brand-mark{position:absolute;right:6vw;top:50%;transform:translateY(-50%);height:118px;width:auto;display:block}
+.brand-mark img{height:100%;width:auto;display:block}
+.logo{font-family:var(--serif);font-weight:500;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:.34em;text-transform:uppercase;text-decoration:none;margin-bottom:20px;text-align:center}
+.logo small{display:block;font-family:var(--sans);font-weight:300;font-size:.62rem;letter-spacing:.52em;color:var(--grey);margin-top:4px}
+nav ul{display:flex;gap:44px;list-style:none;padding-bottom:18px}
+nav ul a{text-decoration:none;font-size:.72rem;text-transform:uppercase;letter-spacing:.24em;position:relative;padding-bottom:6px}
+nav ul a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--ink);transition:right .35s}
+nav ul a:hover::after{right:0}
+@media(max-width:1100px){.brand-mark{height:84px;right:4vw}}
+@media(max-width:760px){nav ul{gap:22px;flex-wrap:wrap;justify-content:center}nav{padding-top:22px}.brand-mark{position:static;transform:none;height:72px;margin-bottom:12px;order:-1}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;height:88vh;min-height:540px;overflow:hidden;background:linear-gradient(160deg,#cdb9c6 0%,#b1a6c4 40%,#96b4b6 75%,#d8c9b2 100%)}
+.hero img{position:absolute;inset:0;object-position:center 22%;transform:scale(1.02);animation:heroZoom 12s ease forwards}
+@keyframes heroZoom{to{transform:scale(1.09)}}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(to top,rgba(17,17,17,.42),transparent 55%)}
+.hero-content{position:absolute;left:0;right:0;bottom:9vh;text-align:center;color:#fff;padding:0 6vw}
+.hero-content h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.4rem,5.4vw,4.6rem);letter-spacing:.06em;margin-bottom:26px;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.btn{display:inline-block;text-decoration:none;font-size:.72rem;text-transform:uppercase;letter-spacing:.3em;padding:16px 44px;transition:all .35s}
+.btn-white{background:#fff;color:var(--ink);border:1px solid #fff}
+.btn-white:hover{background:transparent;color:#fff}
+.btn-dark{background:var(--ink);color:#fff;border:1px solid var(--ink)}
+.btn-dark:hover{background:transparent;color:var(--ink)}
+.btn-line{border-bottom:1px solid var(--ink);padding:4px 2px;letter-spacing:.26em;font-size:.72rem;text-transform:uppercase;text-decoration:none}
+.btn-line:hover{color:var(--gold);border-color:var(--gold)}
+
+/* ---------- EDITORIAL BOXES ---------- */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:26px;padding:26px 26px 0}
+.duo-item{position:relative;aspect-ratio:4/5;overflow:hidden;background:linear-gradient(160deg,#e9dfd2,#d5cabb)}
+.duo-item img{transition:transform 1.4s ease;object-position:center top}
+.duo-item:hover img{transform:scale(1.06)}
+.duo-item .cap{position:absolute;left:0;right:0;bottom:0;padding:60px 30px 30px;text-align:center;color:#fff;
+  background:linear-gradient(to top,rgba(17,17,17,.5),transparent)}
+.duo-item .cap a{color:#fff;border-color:#fff}
+.duo-item .cap a:hover{color:var(--gold)}
+@media(max-width:760px){.duo{grid-template-columns:1fr}}
+
+/* ---------- SECTION HEADS ---------- */
+section{padding:100px 6vw}
+.sec-head{text-align:center;margin-bottom:64px}
+.sec-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,3.4vw,2.7rem);letter-spacing:.08em;margin-bottom:14px}
+.sec-head p{color:var(--grey);font-size:.95rem;max-width:56ch;margin:0 auto}
+
+/* ---------- COLLECTION GRID (product-card style) ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px 26px;max-width:1300px;margin:0 auto}
+.card{text-align:center;text-decoration:none;display:block}
+.card .ph{aspect-ratio:4/5;overflow:hidden;margin-bottom:20px;position:relative;background:var(--off)}
+.card .ph img{transition:transform 1.2s ease}
+.card:hover .ph img{transform:scale(1.07)}
+.card .ph .tag{position:absolute;top:14px;left:14px;background:#fff;font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;padding:6px 12px}
+.card h3{font-family:var(--serif);font-weight:500;font-size:1.15rem;letter-spacing:.06em;margin-bottom:4px}
+.card .med{font-size:.72rem;text-transform:uppercase;letter-spacing:.2em;color:var(--grey);margin-bottom:8px}
+.card .price{font-size:.85rem;letter-spacing:.08em}
+.grid-cta{text-align:center;margin-top:60px}
+/* gradient stand-ins for artworks without photos */
+.ph-a{background:radial-gradient(circle at 35% 30%,#e8c39a,#b46a4e 60%,#5d3b33)}
+.ph-b{background:radial-gradient(circle at 65% 35%,#bfe0d8,#5f9e96 55%,#274b49)}
+.ph-c{background:radial-gradient(circle at 40% 60%,#d9b8d4,#9285b5 55%,#3c3357)}
+
+/* ---------- QUOTE STRIP ---------- */
+.quote{background:var(--off);text-align:center;padding:90px 6vw}
+.quote p{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,2.8vw,2.1rem);max-width:34ch;margin:0 auto 22px;line-height:1.4}
+.quote span{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--grey)}
+
+/* ---------- SERVICES ---------- */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);max-width:1300px;margin:0 auto}
+.svc{background:#fff;padding:52px 34px;text-align:center;transition:background .4s}
+.svc:hover{background:var(--off)}
+.svc .n{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--gold);display:block;margin-bottom:18px}
+.svc h3{font-family:var(--serif);font-weight:500;font-size:1.25rem;letter-spacing:.06em;margin-bottom:12px}
+.svc p{font-size:.88rem;color:var(--grey);margin-bottom:22px}
+
+/* ---------- FULL-BLEED CTA ---------- */
+.bleed{position:relative;height:70vh;min-height:440px;overflow:hidden;background:linear-gradient(160deg,#b8a8c9,#7d94b0 55%,#c9b8a0)}
+.bleed img{position:absolute;inset:0}
+.bleed .veil{position:absolute;inset:0;background:rgba(17,17,17,.34)}
+.bleed .inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;padding:0 6vw}
+.bleed h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,4vw,3.2rem);letter-spacing:.08em;margin-bottom:26px}
+
+/* ---------- NEWSLETTER ---------- */
+.news{background:var(--ink);color:#fff;text-align:center;padding:90px 6vw}
+.news h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.5rem,2.8vw,2.2rem);letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px}
+.news p{color:rgba(255,255,255,.65);font-size:.92rem;max-width:52ch;margin:0 auto 36px}
+.news form{display:flex;max-width:460px;margin:0 auto;border:1px solid rgba(255,255,255,.4)}
+.news input{flex:1;background:transparent;border:none;outline:none;color:#fff;padding:16px 20px;font-family:var(--sans);font-size:.85rem;letter-spacing:.06em}
+.news input::placeholder{color:rgba(255,255,255,.5)}
+.news button{background:#fff;color:var(--ink);border:none;padding:16px 30px;font-family:var(--sans);font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;cursor:pointer;transition:background .3s}
+.news button:hover{background:var(--gold);color:#fff}
+.news small{display:block;margin-top:18px;font-size:.68rem;color:rgba(255,255,255,.4);letter-spacing:.04em}
+
+/* ---------- FOOTER ---------- */
+footer{background:#fff;padding:70px 6vw 40px;border-top:1px solid var(--line)}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;max-width:1300px;margin:0 auto 60px}
+.foot-grid h4{font-size:.72rem;text-transform:uppercase;letter-spacing:.28em;margin-bottom:20px}
+.foot-grid ul{list-style:none}
+.foot-grid li{margin-bottom:10px}
+.foot-grid a{text-decoration:none;font-size:.85rem;color:var(--grey);transition:color .3s}
+.foot-grid a:hover{color:var(--ink)}
+.foot-bottom{max-width:1300px;margin:0 auto;padding-top:26px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.72rem;letter-spacing:.14em;color:var(--grey);text-transform:uppercase}
+.socials{display:flex;gap:26px}
+.socials a{text-decoration:none;color:var(--grey)}
+.socials a:hover{color:var(--ink)}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s ease}
+.reveal.on{opacity:1;transform:none}
+
+
+/* ---------- OBRAS Y EVENTOS ---------- */
+nav ul a.active::after{right:0}
+.eyebrow{display:block;font-size:.68rem;letter-spacing:.36em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.c-head{text-align:center;padding:110px 6vw 70px;background:var(--off)}
+.c-head h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,6vw,4.6rem);letter-spacing:.06em;margin-bottom:22px}
+.c-head p{color:var(--grey);max-width:58ch;margin:0 auto;font-size:1rem}
+.filters{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:36px}
+.filters button{background:#fff;border:1px solid var(--ink);padding:11px 24px;font-family:var(--sans);font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;cursor:pointer;transition:all .3s;color:var(--ink)}
+.filters button:hover,.filters button.on{background:var(--ink);color:#fff}
+.posts{max-width:1150px;margin:0 auto;display:flex;flex-direction:column;gap:110px}
+.post{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:70px;align-items:center}
+.post:nth-child(even){grid-template-columns:minmax(0,1fr) minmax(0,440px)}
+.post:nth-child(even) .embed{order:2}
+.post.hide{display:none}
+.embed{min-width:0}
+.embed .instagram-media{margin:0 auto!important;min-width:0!important;width:100%!important;max-width:440px!important;border:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important}
+.embed .ig-fallback{display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--off);text-decoration:none;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--grey);padding:20px;text-align:center}
+.meta{display:flex;gap:14px;align-items:center;margin-bottom:20px;flex-wrap:wrap}
+.meta .kind{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;border:1px solid var(--gold);color:var(--gold);padding:5px 12px}
+.meta time{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--grey)}
+.txt h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:.03em;line-height:1.2;margin-bottom:20px}
+.txt p{color:var(--grey);margin-bottom:18px;max-width:52ch}
+.txt blockquote{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--ink);border-left:1px solid var(--gold);padding-left:20px;margin:0 0 24px;max-width:46ch}
+.facts{list-style:none;border-top:1px solid var(--line);margin:8px 0 30px;max-width:52ch}
+.facts li{display:flex;gap:18px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.88rem}
+.facts li span:first-child{flex:0 0 120px;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--grey);padding-top:3px}
+@media(max-width:860px){
+  .post,.post:nth-child(even){grid-template-columns:1fr;gap:34px}
+  .post:nth-child(even) .embed{order:0}
+  .posts{gap:80px}
+  .facts li span:first-child{flex-basis:96px}
+}
+.follow{background:var(--off);text-align:center}
+.follow h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:.06em;margin-bottom:14px}
+.follow p{color:var(--grey);max-width:52ch;margin:0 auto 34px}
+.follow .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<div class="bar"><span>Envíos internacionales · Certificado de autenticidad incluido · Encargos personalizados</span></div>
+
+<div class="nav-wrap">
+<nav>
+  <a class="logo" href="index.html">Tatiane Dos Santos<small>Atelier Florescer</small></a>
+  <ul>
+    <li><a href="la-artista.html">La artista</a></li>
+    <li><a class="active" href="obras-eventos.html" aria-current="page">Obras y Eventos</a></li>
+    <li><a href="index.html#servicios">Servicios</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <a class="brand-mark" href="index.html" aria-label="Tatiane Dos Santos Art"><img src="img/logo.png" alt="Logotipo Tatiane Dos Santos Art"></a>
+</nav>
+</div>
+
+<header class="c-head">
+  <span class="eyebrow reveal">Desde el atelier</span>
+  <h1 class="reveal">Obras y Eventos</h1>
+  <p class="reveal">Las últimas piezas, colaboraciones y citas de Tatiane Dos Santos, tal y como las comparte en su Instagram.</p>
+  <div class="filters reveal" role="group" aria-label="Filtrar publicaciones">
+    <button class="on" data-f="all">Todo</button>
+    <button data-f="obra">Obras</button>
+    <button data-f="evento">Eventos</button>
+  </div>
+</header>
+
+<section>
+  <div class="posts">
+    <article class="post reveal" data-kind="obra">
+      <div class="embed">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DeILD4akSjP/?utm_source=ig_embed" data-instgrm-version="14">
+          <a class="ig-fallback" href="https://www.instagram.com/p/DeILD4akSjP/" target="_blank" rel="noopener">Ver esta publicación en Instagram</a>
+        </blockquote>
+      </div>
+      <div class="txt">
+        <div class="meta"><span class="kind">Obra · Colección</span><time datetime="2026-10-05">5 de octubre de 2026</time></div>
+        <h2>Tied Up in Art</h2>
+        <blockquote>“Wear the Masterpiece.”</blockquote>
+        <p>Nueva colección donde la pintura sale del lienzo y se lleva puesta. La corbata <em>The Orange Canvas</em>, creada junto a Zuluz Atelier, y la falda, pintada por Tatiane, convierten cada prenda en una obra única.</p>
+        <ul class="facts"><li><span>Colección</span><span>Tied Up in Art</span></li><li><span>Pieza</span><span>Corbata “The Orange Canvas”</span></li><li><span>Corbata</span><span>Zuluz Atelier &amp; Tatiane Dos Santos</span></li><li><span>Falda</span><span>Tatiane Dos Santos</span></li></ul>
+        <a class="btn-line" href="https://www.instagram.com/p/DeILD4akSjP/" target="_blank" rel="noopener">Ver en Instagram</a>
+      </div>
+    </article>
+    <article class="post reveal" data-kind="evento">
+      <div class="embed">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dd2HkGpoA_7/?utm_source=ig_embed" data-instgrm-version="14">
+          <a class="ig-fallback" href="https://www.instagram.com/p/Dd2HkGpoA_7/" target="_blank" rel="noopener">Ver esta publicación en Instagram</a>
+        </blockquote>
+      </div>
+      <div class="txt">
+        <div class="meta"><span class="kind">Evento</span><time datetime="2026-09-28">28 de septiembre de 2026</time></div>
+        <h2>Despedida del Mercado del Encanto</h2>
+        <blockquote>“Estos espacios son muy importantes para los artistas y creadores.”</blockquote>
+        <p>Tatiane cierra su paso por el Mercado del Encanto en el Palacio de Santa Bárbara con un agradecimiento a su familia, a sus amigos y a todos los que se acercaron a conocer su trabajo. ¡Nos vemos en la próxima!</p>
+        <ul class="facts"><li><span>Lugar</span><span>Palacio de Santa Bárbara, Madrid</span></li><li><span>Evento</span><span>Mercado del Encanto</span></li></ul>
+        <a class="btn-line" href="https://www.instagram.com/p/Dd2HkGpoA_7/" target="_blank" rel="noopener">Ver en Instagram</a>
+      </div>
+    </article>
+    <article class="post reveal" data-kind="evento">
+      <div class="embed">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DducBkrCvaW/?utm_source=ig_embed" data-instgrm-version="14">
+          <a class="ig-fallback" href="https://www.instagram.com/p/DducBkrCvaW/" target="_blank" rel="noopener">Ver esta publicación en Instagram</a>
+        </blockquote>
+      </div>
+      <div class="txt">
+        <div class="meta"><span class="kind">Evento</span><time datetime="2026-09-25">25 de septiembre de 2026</time></div>
+        <h2>Mercado del Encanto · Palacio de Santa Bárbara</h2>
+        <p>Un fin de semana junto a Zuluz Atelier presentando prendas originales, creativas y personalizadas, pensadas para quienes buscan algo diferente y único.</p>
+        <ul class="facts"><li><span>Lugar</span><span>Palacio de Santa Bárbara, Madrid</span></li><li><span>Sábado</span><span>11:30 – 21:00 h</span></li><li><span>Domingo</span><span>11:30 – 20:00 h</span></li><li><span>Junto a</span><span>Zuluz Atelier</span></li></ul>
+        <a class="btn-line" href="https://www.instagram.com/p/DducBkrCvaW/" target="_blank" rel="noopener">Ver en Instagram</a>
+      </div>
+    </article>
+    <article class="post reveal" data-kind="obra">
+      <div class="embed">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DdW92-6qfFI/?utm_source=ig_embed" data-instgrm-version="14">
+          <a class="ig-fallback" href="https://www.instagram.com/p/DdW92-6qfFI/" target="_blank" rel="noopener">Ver esta publicación en Instagram</a>
+        </blockquote>
+      </div>
+      <div class="txt">
+        <div class="meta"><span class="kind">Obra · Colaboración</span><time datetime="2026-09-16">16 de septiembre de 2026</time></div>
+        <h2>Vestido de novia con corbata</h2>
+        <blockquote>“Una combinación perfecta.”</blockquote>
+        <p>Un look nupcial en el que la corbata joya, creada por Zuluz Atelier y Tatiane Dos Santos, aporta un toque único, sofisticado y lleno de personalidad.</p>
+        <ul class="facts"><li><span>Corbata</span><span>Zuluz Atelier &amp; Tatiane Dos Santos</span></li><li><span>Vestido</span><span>Navdra</span></li><li><span>Fotografía</span><span>@tatizoomphotos</span></li><li><span>Maquillaje</span><span>@giralmakeup</span></li></ul>
+        <a class="btn-line" href="https://www.instagram.com/p/DdW92-6qfFI/" target="_blank" rel="noopener">Ver en Instagram</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="follow">
+  <span class="eyebrow reveal">@tatianedossantosart</span>
+  <h2 class="reveal">Sigue el día a día del atelier</h2>
+  <p class="reveal">Nuevas obras, procesos y próximas citas se publican primero en Instagram.</p>
+  <div class="btns reveal">
+    <a class="btn btn-dark" href="https://www.instagram.com/tatianedossantosart/" target="_blank" rel="noopener">Seguir en Instagram</a>
+    <a class="btn btn-dark" style="background:#fff;color:var(--ink)" href="contacto.html">Contactar</a>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <h4>Atelier</h4>
+      <ul>
+        <li><a href="index.html#servicios">Exposiciones</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>La Artista</h4>
+      <ul>
+        <li><a href="la-artista.html">Biografía</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Sígueme</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/tatianedossantosart/" target="_blank" rel="noopener">Instagram · @tatianedossantosart</a></li>
+        <li><a href="https://www.instagram.com/tatiane_d.santos/" target="_blank" rel="noopener">Instagram · @tatiane_d.santos</a></li>
+        <li><a href="https://www.instagram.com/florescertds/" target="_blank" rel="noopener">Instagram · @florescertds</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://wa.me/34648708700" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="mailto:hola@tatianedossantos.art">Email</a></li>
+        <li><a href="https://www.instagram.com/tatianedossantosart/" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Tatiane Dos Santos</span>
+    <div class="socials">
+      <a href="https://www.instagram.com/tatianedossantosart/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.instagram.com/florescertds/" target="_blank" rel="noopener">Florescer</a>
+    </div>
+  </div>
+</footer>
+
+<script async src="https://www.instagram.com/embed.js"></script>
+<script>
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.filters button').forEach(x=>x.classList.toggle('on',x===b));
+  const f=b.dataset.f;
+  document.querySelectorAll('.post').forEach(p=>p.classList.toggle('hide',f!=='all'&&p.dataset.kind!==f));
+}));
+</script>
+</body>
+</html>
