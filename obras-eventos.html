@@ -158,9 +158,15 @@ nav ul a.active::after{right:0}
 .embed{min-width:0}
 .embed .instagram-media{margin:0 auto!important;min-width:0!important;width:100%!important;max-width:440px!important;border:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important}
 .embed .ig-fallback{display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--off);text-decoration:none;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--grey);padding:20px;text-align:center}
-.art-photo{margin:0 auto;max-width:440px;border:1px solid var(--line);background:var(--off);overflow:hidden}
-.art-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;transition:transform 1.2s ease}
-.art-photo:hover img{transform:scale(1.03)}
+.art-photo{margin:0 auto;max-width:440px;border:1px solid var(--line);background:#fff;overflow:hidden}
+.ap-head{display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid var(--line);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.ap-avatar{width:34px;height:34px;border-radius:50%;object-fit:contain;border:1px solid var(--line);background:#fff;padding:3px}
+.ap-user{flex:1;min-width:0;line-height:1.25;font-size:.9rem;color:#262626}
+.ap-user b{display:block;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ap-user small{font-size:.78rem;color:#262626}
+.ap-btn{background:#4c5fd7;color:#fff;text-decoration:none;font-weight:600;font-size:.85rem;padding:7px 14px;border-radius:4px;white-space:nowrap}
+.ap-btn:hover{background:#3f50c4}
+.ap-img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%}
 .meta{display:flex;gap:14px;align-items:center;margin-bottom:20px;flex-wrap:wrap}
 .meta .kind{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;border:1px solid var(--gold);color:var(--gold);padding:5px 12px}
 .meta time{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--grey)}
@@ -214,10 +220,17 @@ nav ul a.active::after{right:0}
   <div class="posts">
     <article class="post reveal" data-kind="obra">
       <div class="embed">
-        <figure class="art-photo"><img src="img/mulheres.jpg" alt="Tatiane Dos Santos con la obra Mulheres: falda de tul rosa y corbata pintadas a mano, ante un lienzo abstracto en tonos rosa y óxido" loading="lazy"></figure>
+        <figure class="art-photo">
+          <figcaption class="ap-head">
+            <img class="ap-avatar" src="img/logo.png" alt="">
+            <span class="ap-user"><b>tatianedossantosart</b><small>Mulheres</small></span>
+            <a class="ap-btn" href="https://www.instagram.com/tatianedossantosart/" target="_blank" rel="noopener">Ver perfil</a>
+          </figcaption>
+          <img class="ap-img" src="img/mulheres.jpg" alt="Tatiane Dos Santos con la obra Mulheres: falda de tul rosa y corbata pintadas a mano, ante un lienzo abstracto en tonos rosa y óxido" loading="lazy">
+        </figure>
       </div>
       <div class="txt">
-        <div class="meta"><span class="kind">Obra · Arte para vestir</span></div>
+        <div class="meta"><span class="kind">Obra · Arte para vestir</span><time datetime="2026-10-30">30 de octubre de 2026</time></div>
         <h2>Mulheres</h2>
         <blockquote>“Arte que se viste y se expresa.”</blockquote>
         <p>Mi obra <em>Mulheres</em>, donde el arte y la moda se unen. La falda y la corbata están pintadas a mano, haciendo que estas piezas sean únicas.</p>
