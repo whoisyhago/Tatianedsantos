@@ -158,6 +158,9 @@ nav ul a.active::after{right:0}
 .embed{min-width:0}
 .embed .instagram-media{margin:0 auto!important;min-width:0!important;width:100%!important;max-width:440px!important;border:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important}
 .embed .ig-fallback{display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:var(--off);text-decoration:none;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--grey);padding:20px;text-align:center}
+.art-photo{margin:0 auto;max-width:440px;border:1px solid var(--line);background:var(--off);overflow:hidden}
+.art-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%;transition:transform 1.2s ease}
+.art-photo:hover img{transform:scale(1.03)}
 .meta{display:flex;gap:14px;align-items:center;margin-bottom:20px;flex-wrap:wrap}
 .meta .kind{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;border:1px solid var(--gold);color:var(--gold);padding:5px 12px}
 .meta time{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--grey)}
@@ -209,6 +212,20 @@ nav ul a.active::after{right:0}
 
 <section>
   <div class="posts">
+    <article class="post reveal" data-kind="obra">
+      <div class="embed">
+        <figure class="art-photo"><img src="img/mulheres.jpg" alt="Tatiane Dos Santos con la obra Mulheres: falda de tul rosa y corbata pintadas a mano, ante un lienzo abstracto en tonos rosa y óxido" loading="lazy"></figure>
+      </div>
+      <div class="txt">
+        <div class="meta"><span class="kind">Obra · Arte para vestir</span></div>
+        <h2>Mulheres</h2>
+        <blockquote>“Arte que se viste y se expresa.”</blockquote>
+        <p>Mi obra <em>Mulheres</em>, donde el arte y la moda se unen. La falda y la corbata están pintadas a mano, haciendo que estas piezas sean únicas.</p>
+        <p lang="en" style="font-style:italic">My artwork Mulheres, where art and fashion come together. The skirt and tie are hand-painted, making these pieces unique. Art that you can wear and express.</p>
+        <ul class="facts"><li><span>Obra</span><span>Mulheres</span></li><li><span>Falda</span><span>Pintada a mano por Tatiane Dos Santos</span></li><li><span>Corbata</span><span>Pintada a mano por Tatiane Dos Santos</span></li><li><span>Carácter</span><span>Piezas únicas</span></li></ul>
+        <a class="btn-line" href="contacto.html">Consultar esta obra</a>
+      </div>
+    </article>
     <article class="post reveal" data-kind="obra">
       <div class="embed">
         <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DeILD4akSjP/?utm_source=ig_embed" data-instgrm-version="14">
