@@ -167,6 +167,16 @@ nav ul a.active::after{right:0}
 .ap-btn{background:#4c5fd7;color:#fff;text-decoration:none;font-weight:600;font-size:.85rem;padding:7px 14px;border-radius:4px;white-space:nowrap}
 .ap-btn:hover{background:#3f50c4}
 .ap-img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%}
+.ap-slides{position:relative}
+.ap-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.ap-track::-webkit-scrollbar{display:none}
+.ap-track img{flex:0 0 100%;scroll-snap-align:start}
+.ap-arrow{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;border:none;background:rgba(255,255,255,.85);color:var(--ink);font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 6px rgba(0,0,0,.15)}
+.ap-arrow.prev{left:10px}.ap-arrow.next{right:10px}
+.ap-arrow[disabled]{opacity:0;pointer-events:none}
+.ap-dots{display:flex;justify-content:center;gap:6px;padding:10px 0}
+.ap-dots span{width:6px;height:6px;border-radius:50%;background:#c7c7c7;transition:background .3s}
+.ap-dots span.on{background:#4c5fd7}
 .meta{display:flex;gap:14px;align-items:center;margin-bottom:20px;flex-wrap:wrap}
 .meta .kind{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;border:1px solid var(--gold);color:var(--gold);padding:5px 12px}
 .meta time{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--grey)}
@@ -218,6 +228,37 @@ nav ul a.active::after{right:0}
 
 <section>
   <div class="posts">
+    <article class="post reveal" data-kind="obra">
+      <div class="embed">
+        <figure class="art-photo">
+          <figcaption class="ap-head">
+            <img class="ap-avatar" src="img/logo.png" alt="">
+            <span class="ap-user"><b>tatianedossantosart</b><small>Sol e Sombra</small></span>
+            <a class="ap-btn" href="https://www.instagram.com/tatianedossantosart/" target="_blank" rel="noopener">Ver perfil</a>
+          </figcaption>
+          <div class="ap-slides">
+            <div class="ap-track">
+              <img class="ap-img" src="img/sol-e-sombra-1.jpg" alt="Tatiane Dos Santos con un vestido pintado a mano junto al lienzo abstracto Sol e Sombra, en tonos azules, violetas y dorados" loading="lazy">
+              <img class="ap-img" src="img/sol-e-sombra-2.jpg" alt="Tatiane Dos Santos de perfil ante la obra Sol e Sombra, colocada en un caballete" loading="lazy">
+              <img class="ap-img" src="img/sol-e-sombra-3.jpg" alt="Tatiane Dos Santos de espaldas mostrando el vestido pintado a mano frente a Sol e Sombra" loading="lazy">
+            </div>
+            <button class="ap-arrow prev" type="button" aria-label="Foto anterior" disabled>&#8249;</button>
+            <button class="ap-arrow next" type="button" aria-label="Foto siguiente">&#8250;</button>
+          </div>
+          <div class="ap-dots" aria-hidden="true"><span class="on"></span><span></span><span></span></div>
+        </figure>
+      </div>
+      <div class="txt">
+        <div class="meta"><span class="kind">Obra · Arte para vestir</span><time datetime="2026-11-09">9 de noviembre de 2026</time></div>
+        <h2>Sol e Sombra</h2>
+        <blockquote>“Pintura que se lleva puesta.”</blockquote>
+        <p><em>Sol e Sombra</em>: una obra que he creado inspirándome en la naturaleza, sus luces, sombras y contrastes.</p>
+        <p>Pintura que se lleva puesta: un vestido que he pintado a mano, convirtiendo el arte en una expresión de moda.</p>
+        <p lang="en" style="font-style:italic">Sol e Sombra: a work I created inspired by nature, its light, shadows and contrasts. Art You Can Wear: a dress I hand-painted, turning art into an expression of fashion.</p>
+        <ul class="facts"><li><span>Obra</span><span>Sol e Sombra</span></li><li><span>Inspiración</span><span>La naturaleza: luces, sombras y contrastes</span></li><li><span>Vestido</span><span>Pintado a mano por Tatiane Dos Santos</span></li></ul>
+        <a class="btn-line" href="contacto.html">Consultar esta obra</a>
+      </div>
+    </article>
     <article class="post reveal" data-kind="obra">
       <div class="embed">
         <figure class="art-photo">
@@ -345,6 +386,14 @@ document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('clic
   const f=b.dataset.f;
   document.querySelectorAll('.post').forEach(p=>p.classList.toggle('hide',f!=='all'&&p.dataset.kind!==f));
 }));
+document.querySelectorAll('.ap-slides').forEach(sl=>{
+  const tr=sl.querySelector('.ap-track'),n=tr.children.length,pv=sl.querySelector('.prev'),nx=sl.querySelector('.next'),dots=sl.parentElement.querySelectorAll('.ap-dots span');
+  const idx=()=>Math.round(tr.scrollLeft/tr.clientWidth);
+  const upd=()=>{const i=idx();pv.disabled=i<=0;nx.disabled=i>=n-1;dots.forEach((d,k)=>d.classList.toggle('on',k===i))};
+  pv.addEventListener('click',()=>tr.scrollBy({left:-tr.clientWidth,behavior:'smooth'}));
+  nx.addEventListener('click',()=>tr.scrollBy({left:tr.clientWidth,behavior:'smooth'}));
+  tr.addEventListener('scroll',()=>requestAnimationFrame(upd),{passive:true});
+});
 </script>
 </body>
 </html>
