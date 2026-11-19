@@ -1,6 +1,6 @@
 Fotos usadas en la web:
 - portada.jpg            -> portada principal (hero)
-- descubrir-artista.jpg  -> bloque "Descubrir a la artista"
+- la-artista.jpg  -> bloque "Descubrir a la artista" y portada de La artista
 - explorar-obras.jpg     -> bloque "Explorar las obras"
 - tatiane-1.jpg (exposicion, obras circulares)   -> tarjeta "Serie Lunas"
 - tatiane-2.jpg (retrato Cacique)                -> tarjeta "Cacique" y banda "Arte que florece"
